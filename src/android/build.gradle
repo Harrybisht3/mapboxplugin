@@ -1,0 +1,11 @@
+
+ext.cdvMinSdkVersion = 19
+
+    repositories {
+        mavenCentral()
+        maven { url 'https://mapbox.bintray.com/mapbox' }
+    }
+
+ 
+
+

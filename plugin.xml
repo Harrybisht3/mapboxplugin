@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-mapboxplugin" version="1.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>Mapboxplugin</name>
+    <js-module name="Mapboxplugin" src="www/Mapboxplugin.js">
+        <clobbers target="Mapboxplugin" />
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+                <feature name="Mapboxplugin">   
+                    <param name="android-package" value="cordova.mapboxplugin.Mapboxplugin" />
+                </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml">
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+            <uses-permission android:name="android.permission.INTERNET" />
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+            <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+            <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+        </config-file>
+        <source-file src="src/android/Mapboxplugin.java" target-dir="src/cordova/mapboxplugin" />
+         <config-file target="res/values/strings.xml" parent="/*">
+            <string name="mapbox_access_token">pk.eyJ1Ijoia3VsZGVlcGJ1dG9sYTMiLCJhIjoiY2syNDZ1Z3VvMHp3aTNtazU5eGFoeGFoYSJ9.L1yygMXASCPeTWs7bbjkCQ</string>
+            <string name="start_navigation">Start Navigation</string>
+        </config-file>
+        <source-file src="src/android/res/layout/top_layer.xml" target-dir="res/layout/"/>
+         <source-file src="src/android/res/layout/bottom_layer.xml" target-dir="res/layout/"/>
+
+         <source-file src="src/android/res/drawable/round_bottom.xml" target-dir="res/drawable"/>
+         <source-file src="src/android/res/drawable/rounded_background.xml" target-dir="res/drawable"/>
+   <!--      hdpi land drawables> -->
+         <source-file src="src/android/res/drawable-land-hdpi/car.png" target-dir="res/drawable-land-hdpi"/>
+           <source-file src="src/android/res/drawable-land-hdpi/car_white.png" target-dir="res/drawable-land-hdpi"/>
+            <source-file src="src/android/res/drawable-land-hdpi/cycle.png" target-dir="res/drawable-land-hdpi"/>
+            <source-file src="src/android/res/drawable-land-hdpi/cycle_white.png" target-dir="res/drawable-land-hdpi"/>
+            <source-file src="src/android/res/drawable-land-hdpi/walk.png" target-dir="res/drawable-land-hdpi"/>
+            <source-file src="src/android/res/drawable-land-hdpi/walk_white.png" target-dir="res/drawable-land-hdpi"/>
+            <source-file src="src/android/res/drawable-land-hdpi/map_location.png" target-dir="res/drawable-land-hdpi"/>
+            <source-file src="src/android/res/drawable-land-hdpi/map_location_blue.png" target-dir="res/drawable-land-hdpi"/>
+            <source-file src="src/android/res/drawable-land-hdpi/icon_kiosk.png" target-dir="res/drawable-land-hdpi"/>
+   <!--      hdpi port drawables> -->
+             <source-file src="src/android/res/drawable-port-hdpi/car.png" target-dir="res/drawable-port-hdpi"/>
+           <source-file src="src/android/res/drawable-port-hdpi/car_white.png" target-dir="res/drawable-port-hdpi"/>
+            <source-file src="src/android/res/drawable-port-hdpi/cycle.png" target-dir="res/drawable-port-hdpi"/>
+            <source-file src="src/android/res/drawable-port-hdpi/cycle_white.png" target-dir="res/drawable-port-hdpi"/>
+            <source-file src="src/android/res/drawable-port-hdpi/walk.png" target-dir="res/drawable-port-hdpi"/>
+            <source-file src="src/android/res/drawable-port-hdpi/walk_white.png" target-dir="res/drawable-port-hdpi"/>
+            <source-file src="src/android/res/drawable-port-hdpi/map_location.png" target-dir="res/drawable-port-hdpi"/>
+            <source-file src="src/android/res/drawable-port-hdpi/map_location_blue.png" target-dir="res/drawable-port-hdpi"/>
+            <source-file src="src/android/res/drawable-port-hdpi/icon_kiosk.png" target-dir="res/drawable-port-hdpi"/>
+              <!--      mdpi land drawables> -->
+           <source-file src="src/android/res/drawable-land-mdpi/car.png" target-dir="res/drawable-land-mdpi"/>
+           <source-file src="src/android/res/drawable-land-mdpi/car_white.png" target-dir="res/drawable-land-mdpi"/>
+            <source-file src="src/android/res/drawable-land-mdpi/cycle.png" target-dir="res/drawable-land-mdpi"/>
+            <source-file src="src/android/res/drawable-land-mdpi/cycle_white.png" target-dir="res/drawable-land-mdpi"/>
+            <source-file src="src/android/res/drawable-land-mdpi/walk.png" target-dir="res/drawable-land-mdpi"/>
+            <source-file src="src/android/res/drawable-land-mdpi/walk_white.png" target-dir="res/drawable-land-mdpi"/>
+            <source-file src="src/android/res/drawable-land-mdpi/map_location.png" target-dir="res/drawable-land-mdpi"/>
+            <source-file src="src/android/res/drawable-land-mdpi/map_location_blue.png" target-dir="res/drawable-land-mdpi"/>
+            <source-file src="src/android/res/drawable-land-mdpi/icon_kiosk.png" target-dir="res/drawable-land-mdpi"/>
+  <!--      mdpi port drawables> -->
+             <source-file src="src/android/res/drawable-port-mdpi/car.png" target-dir="res/drawable-port-mdpi"/>
+           <source-file src="src/android/res/drawable-port-mdpi/car_white.png" target-dir="res/drawable-port-mdpi"/>
+            <source-file src="src/android/res/drawable-port-mdpi/cycle.png" target-dir="res/drawable-port-mdpi"/>
+            <source-file src="src/android/res/drawable-port-mdpi/cycle_white.png" target-dir="res/drawable-port-mdpi"/>
+            <source-file src="src/android/res/drawable-port-mdpi/walk.png" target-dir="res/drawable-port-mdpi"/>
+            <source-file src="src/android/res/drawable-port-mdpi/walk_white.png" target-dir="res/drawable-port-mdpi"/>
+            <source-file src="src/android/res/drawable-port-mdpi/map_location.png" target-dir="res/drawable-port-mdpi"/>
+            <source-file src="src/android/res/drawable-port-mdpi/map_location_blue.png" target-dir="res/drawable-port-mdpi"/>
+            <source-file src="src/android/res/drawable-port-mdpi/icon_kiosk.png" target-dir="res/drawable-port-mdpi"/>
+             <!--      xhdpi land drawables> -->
+           <source-file src="src/android/res/drawable-land-xhdpi/car.png" target-dir="res/drawable-land-xhdpi"/>
+           <source-file src="src/android/res/drawable-land-xhdpi/car_white.png" target-dir="res/drawable-land-xhdpi"/>
+            <source-file src="src/android/res/drawable-land-xhdpi/cycle.png" target-dir="res/drawable-land-xhdpi"/>
+            <source-file src="src/android/res/drawable-land-xhdpi/cycle_white.png" target-dir="res/drawable-land-xhdpi"/>
+            <source-file src="src/android/res/drawable-land-xhdpi/walk.png" target-dir="res/drawable-land-xhdpi"/>
+            <source-file src="src/android/res/drawable-land-xhdpi/walk_white.png" target-dir="res/drawable-land-xhdpi"/>
+            <source-file src="src/android/res/drawable-land-xhdpi/map_location.png" target-dir="res/drawable-land-xhdpi"/>
+            <source-file src="src/android/res/drawable-land-xhdpi/map_location_blue.png" target-dir="res/drawable-land-xhdpi"/>
+            <source-file src="src/android/res/drawable-land-xhdpi/icon_kiosk.png" target-dir="res/drawable-land-xhdpi"/>
+  <!--      xhdpi port drawables> -->
+             <source-file src="src/android/res/drawable-port-xhdpi/car.png" target-dir="res/drawable-port-xhdpi"/>
+           <source-file src="src/android/res/drawable-port-xhdpi/car_white.png" target-dir="res/drawable-port-xhdpi"/>
+            <source-file src="src/android/res/drawable-port-xhdpi/cycle.png" target-dir="res/drawable-port-xhdpi"/>
+            <source-file src="src/android/res/drawable-port-xhdpi/cycle_white.png" target-dir="res/drawable-port-xhdpi"/>
+            <source-file src="src/android/res/drawable-port-xhdpi/walk.png" target-dir="res/drawable-port-xhdpi"/>
+            <source-file src="src/android/res/drawable-port-xhdpi/walk_white.png" target-dir="res/drawable-port-xhdpi"/>
+            <source-file src="src/android/res/drawable-port-xhdpi/map_location.png" target-dir="res/drawable-port-xhdpi"/>
+            <source-file src="src/android/res/drawable-port-xhdpi/map_location_blue.png" target-dir="res/drawable-port-xhdpi"/>
+            <source-file src="src/android/res/drawable-port-xhdpi/icon_kiosk.png" target-dir="res/drawable-port-xhdpi"/>
+              <!--      xxhdpi land drawables> -->
+            <source-file src="src/android/res/drawable-land-xxhdpi/car.png" target-dir="res/drawable-land-xxhdpi"/>
+           <source-file src="src/android/res/drawable-land-xxhdpi/car_white.png" target-dir="res/drawable-land-xxhdpi"/>
+            <source-file src="src/android/res/drawable-land-xxhdpi/cycle.png" target-dir="res/drawable-land-xxhdpi"/>
+            <source-file src="src/android/res/drawable-land-xxhdpi/cycle_white.png" target-dir="res/drawable-land-xxhdpi"/>
+            <source-file src="src/android/res/drawable-land-xxhdpi/walk.png" target-dir="res/drawable-land-xxhdpi"/>
+            <source-file src="src/android/res/drawable-land-xxhdpi/walk_white.png" target-dir="res/drawable-land-xxhdpi"/>
+            <source-file src="src/android/res/drawable-land-xxhdpi/map_location.png" target-dir="res/drawable-land-xxhdpi"/>
+            <source-file src="src/android/res/drawable-land-xxhdpi/map_location_blue.png" target-dir="res/drawable-land-xxhdpi"/>
+            <source-file src="src/android/res/drawable-land-xxhdpi/icon_kiosk.png" target-dir="res/drawable-land-xxhdpi"/>
+  <!--      xxhdpi port drawables> -->
+             <source-file src="src/android/res/drawable-port-xxhdpi/car.png" target-dir="res/drawable-port-xxhdpi"/>
+           <source-file src="src/android/res/drawable-port-xxhdpi/car_white.png" target-dir="res/drawable-port-xxhdpi"/>
+            <source-file src="src/android/res/drawable-port-xxhdpi/cycle.png" target-dir="res/drawable-port-xxhdpi"/>
+            <source-file src="src/android/res/drawable-port-xxhdpi/cycle_white.png" target-dir="res/drawable-port-xxhdpi"/>
+            <source-file src="src/android/res/drawable-port-xxhdpi/walk.png" target-dir="res/drawable-port-xxhdpi"/>
+            <source-file src="src/android/res/drawable-port-xxhdpi/walk_white.png" target-dir="res/drawable-port-xxhdpi"/>
+            <source-file src="src/android/res/drawable-port-xxhdpi/map_location.png" target-dir="res/drawable-port-xxhdpi"/>
+            <source-file src="src/android/res/drawable-port-xxhdpi/map_location_blue.png" target-dir="res/drawable-port-xxhdpi"/>
+            <source-file src="src/android/res/drawable-port-xxhdpi/icon_kiosk.png" target-dir="res/drawable-port-xxhdpi"/>
+              <!--      xxxhdpi land drawables> -->
+           <source-file src="src/android/res/drawable-land-xxxhdpi/car.png" target-dir="res/drawable-land-xxxhdpi"/>
+           <source-file src="src/android/res/drawable-land-xxxhdpi/car_white.png" target-dir="res/drawable-land-xxxhdpi"/>
+            <source-file src="src/android/res/drawable-land-xxxhdpi/cycle.png" target-dir="res/drawable-land-xxxhdpi"/>
+            <source-file src="src/android/res/drawable-land-xxxhdpi/cycle_white.png" target-dir="res/drawable-land-xxxhdpi"/>
+            <source-file src="src/android/res/drawable-land-xxxhdpi/walk.png" target-dir="res/drawable-land-xxxhdpi"/>
+            <source-file src="src/android/res/drawable-land-xxxhdpi/walk_white.png" target-dir="res/drawable-land-xxxhdpi"/>
+            <source-file src="src/android/res/drawable-land-xxxhdpi/map_location.png" target-dir="res/drawable-land-xxxhdpi"/>
+            <source-file src="src/android/res/drawable-land-xxxhdpi/map_location_blue.png" target-dir="res/drawable-land-xxxhdpi"/>
+            <source-file src="src/android/res/drawable-land-xxxhdpi/icon_kiosk.png" target-dir="res/drawable-land-xxxhdpi"/>
+  <!--      xxhdpi port drawables> -->
+             <source-file src="src/android/res/drawable-port-xxxhdpi/car.png" target-dir="res/drawable-port-xxxhdpi"/>
+           <source-file src="src/android/res/drawable-port-xxxhdpi/car_white.png" target-dir="res/drawable-port-xxxhdpi"/>
+            <source-file src="src/android/res/drawable-port-xxxhdpi/cycle.png" target-dir="res/drawable-port-xxxhdpi"/>
+            <source-file src="src/android/res/drawable-port-xxxhdpi/cycle_white.png" target-dir="res/drawable-port-xxxhdpi"/>
+            <source-file src="src/android/res/drawable-port-xxxhdpi/walk.png" target-dir="res/drawable-port-xxxhdpi"/>
+            <source-file src="src/android/res/drawable-port-xxxhdpi/walk_white.png" target-dir="res/drawable-port-xxxhdpi"/>
+            <source-file src="src/android/res/drawable-port-xxxhdpi/map_location.png" target-dir="res/drawable-port-xxxhdpi"/>
+            <source-file src="src/android/res/drawable-port-xxxhdpi/map_location_blue.png" target-dir="res/drawable-port-xxxhdpi"/>
+            <source-file src="src/android/res/drawable-port-xxxhdpi/icon_kiosk.png" target-dir="res/drawable-port-xxxhdpi"/>
+
+          <framework src="src/android/build.gradle" custom="true" type="gradleReference"/>
+          <framework src="com.mapbox.mapboxsdk:mapbox-android-sdk:9.0.0" />
+          <framework src="com.mapbox.mapboxsdk:mapbox-sdk-services:5.0.0" />
+          <framework src="com.mapbox.mapboxsdk:mapbox-sdk-turf:5.0.0" />
+          <framework src="com.mapbox.mapboxsdk:mapbox-android-navigation:0.42.6" />
+          <framework src="com.mapbox.mapboxsdk:mapbox-android-navigation-ui:0.42.6" />
+          <framework src="androidx.constraintlayout:constraintlayout:2.0.0-beta4" />
+ 	  <framework src="com.squareup.picasso:picasso:2.71828" />
+
+    </platform>
+</plugin>
